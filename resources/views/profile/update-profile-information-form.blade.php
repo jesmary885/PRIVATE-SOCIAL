@@ -115,15 +115,14 @@
         <div class="col-span-6 sm:col-span-4">
 
         
-            <x-label for="genero" value="Genero" />
-    
-            <select wire:model.defer="state.genero" title="Genero" id="genero" class="mt-2 block w-full bg-gray-50 border border-gray-200 text-gray-400 py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-                <option value="" selected>{{__('messages.Seleccione una opción')}}</option>  
-                <option value="femenino">Femenino</option> 
-                <option value="masculino">Masculino</option>  
-                <option value="transexual">Transexual</option> 
+            <x-label for="gener" value="Genero" />
+            <select wire:model.defer="state.gener_id" id="gener_id" class="mt-2 block w-full bg-gray-50 border border-gray-200 text-gray-400 py-1 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <option value="" selected>{{__('messages.Seleccione una opción')}}</option>
+                @foreach ($geners as $gener)
+                    <option value="{{$gener->id}}">{{$gener->name}}</option>
+                @endforeach
             </select>
-            <x-input-error for="genero" />
+            <x-input-error for="gener_id" />
    
         </div>
 

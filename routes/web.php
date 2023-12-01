@@ -43,12 +43,20 @@ Route::post('log', [LoginController::class, 'authenticate'])->name('log');
 
 
         Route::get('creadores', [CreadoresController::class,'index'])->name('creadores.index');
+        Route::get('creadores/{creator}', [CreadoresController::class,'select'])->name('creadores_select.index');
+
 
       
         Route::post('user/file',[ProfileController::class,'file'])->name('profile_user.photo');
+     
+
+        Route::get('Add_public', [ProfileController::class,'add_public'])->name('profile_user.add_public');
+
+        Route::get('Mod_Image', [ProfileController::class,'mod_image'])->name('profile_user.Mod_image');
 
         Route::get('profile_user/edit_banner', [ProfileController::class, 'index_edit_image']);
         Route::post('crop-image-upload-ajax', [ProfileController::class, 'cropImageUploadAjax']);
+        Route::post('crop-image-publicacion', [ProfileController::class, 'cropImagePublicacion']);
 
 
 

@@ -1,26 +1,6 @@
 <div>
-    <style>
-        input[type="file"] {
-            display: none;
-        }
 
-        .custom-file-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-   
-    </style>
-
-
-
-      <label class="custom-file-upload">
-        <input wire:click="$set('open',true)" type="file"/>
-        Editar foto de portada
-      </label>
-  
+    <a class="pr-2 hover:text-blue-600 cursor-pointer" wire:click="$set('open',true)">Editar</a>
 
     <x-dialog-modal wire:model="open">
 

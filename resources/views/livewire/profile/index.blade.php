@@ -1,6 +1,16 @@
 <div>
 
+  
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.2/plyr.css" />
+
   <style>
+
+.container2 {
+	margin: 50px auto;
+	max-width: 500px;
+}
+
+    
     input[type="file"] {
         display: none;
     }
@@ -32,7 +42,9 @@
 }
 .modal-lg{
     max-width: 1000px !important;
+    z-index:0 !important;
 }
+
 
 
 </style>
@@ -41,254 +53,239 @@
 <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
 
 
+<!-- component -->
 <main class="profile-page">
-  <section class="relative block h-500-px">
-    <div class="absolute top-0 w-full h-full bg-center bg-cover" style="
-            background-image: url({{ Storage::url($creador->banner) }});
-          ">
+<div class=" bg-white">
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-6">
 
+    <div>
 
-      <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
-        <div class="py-6 px-3 mt-32 sm:mt-0">
-          <div class="w-full">
-            <div class= "mt-2 sm:mt-0">
+      <div class="post mt-2 lg:p-1  rounded-md">
+        <div class=" z-10 lg:left-3 md:w-1/2 md:fixed rounded-md shadow-md ">
 
-              <label class="custom-file-upload flex justify-center font-semibold bg-white rounded-sm ">
-                <input type="file"  name="image" class="image"/>
-                <svg class=" w-6 h-6 text-gray-100 mr-2" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m512 144v288c0 26.5-21.5 48-48 48h-416c-26.5 0-48-21.5-48-48v-288c0-26.5 21.5-48 48-48h88l12.3-32.9c7-18.7 24.9-31.1 44.9-31.1h125.5c20 0 37.9 12.4 44.9 31.1l12.4 32.9h88c26.5 0 48 21.5 48 48zm-136 144c0-66.2-53.8-120-120-120s-120 53.8-120 120 53.8 120 120 120 120-53.8 120-120zm-32 0c0 48.5-39.5 88-88 88s-88-39.5-88-88 39.5-88 88-88 88 39.5 88 88z"/></svg>
-                  
-                  Editar foto de portada
-              </label>
+          <section class="relative block h-500-px  ">
+
+            <div class="absolute top-0 w-full h-full bg-center bg-cover" style="background-image: url({{ Storage::url($creador->banner) }});">
+              <div class=" w-1/2 px-1 lg:order-3 lg:text-right lg:self-center">
+                <div class="py-1 -full px-1 mt-32 sm:mt-0">
+                  <div class="w-full">
+                    <div class= "mt-2 sm:mt-0">
+    
+                      <label class="custom-file-upload flex justify-center w-full font-semibold bg-white rounded-md ">
+                        <input type="file"  name="image" class="image"/>
+                        <svg class=" w-5 h-5 text-gray-100 mr-2 " viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m512 144v288c0 26.5-21.5 48-48 48h-416c-26.5 0-48-21.5-48-48v-288c0-26.5 21.5-48 48-48h88l12.3-32.9c7-18.7 24.9-31.1 44.9-31.1h125.5c20 0 37.9 12.4 44.9 31.1l12.4 32.9h88c26.5 0 48 21.5 48 48zm-136 144c0-66.2-53.8-120-120-120s-120 53.8-120 120 53.8 120 120 120 120-53.8 120-120zm-32 0c0 48.5-39.5 88-88 88s-88-39.5-88-88 39.5-88 88-88 88 39.5 88 88z"/></svg>
+                          
+                          Editar foto de portada
+                      </label>
           
-              <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="modalLabel">Actualizar foto de portada</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                      </button>
+                      
+                        
+                    
                     </div>
-                    <div class="modal-body">
-                      <div class="img-container">
-                        <div class="row">
-                          <div class="col-md-8">
-                            <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
-                          </div>
-                      <div class="col-md-4">
-                        <div class="preview"></div>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-primary" id="crop">Guardar</button>
-                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      
-
-      
-    </div>
-    <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
-      <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
-        <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
-      </svg>
-    </div>
-  </section>
-  
-  <section class="relative py-16 bg-blueGray-200">
-    <div class="container mx-auto px-4">
-      <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
-        <div class="px-6">
-          <div class="flex flex-wrap justify-center">
-            <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-              <div class="relative">
-                 <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile Picture" class=" object-cover object-center absolute bottom-0 left-2/4 transform -m-16 -ml-20 lg:-ml-16 max-w-150-px -translate-x-1/2 translate-y-1/2 w-40 h-40 rounded-full border-4 border-white">
-               
-              </div>
+            <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px" style="transform: translateZ(0px)">
+              <svg class="absolute bottom-0 overflow-hidden" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" version="1.1" viewBox="0 0 2560 100" x="0" y="0">
+                <polygon class="text-blueGray-200 fill-current" points="2560 0 2560 100 0 100"></polygon>
+              </svg>
             </div>
-            <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
-              <div class="py-6 px-3 mt-32 sm:mt-0">
 
-                
-              
-              </div>
-            </div>
-            <div class="w-full lg:w-4/12 px-4 lg:order-1">
-              
-            </div>
-          </div>
-          <div class="text-center mt-12">
-            <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
-                {{$user->name}}
-            </h3>
+          </section>
+
+          <section class="relative py-16 bg-blueGray-200">
+            <div class="container mx-auto px-4">
+              <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+                <div class="px-6">
+                  <div class="flex flex-wrap justify-center">
+                    <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
+                      <div class="relative">
+                         <img src="{{ Auth::user()->profile_photo_url }}" alt="Profile Picture" class=" object-cover object-center absolute bottom-0 left-2/4 transform -m-16 -ml-20 lg:-ml-16 max-w-150-px -translate-x-1/2 translate-y-1/2 w-40 h-40 rounded-full border-4 border-white">
+                       
+                      </div>
+                    </div>
+                    <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
+                      <div class="py-6 px-3 mt-32 sm:mt-0">
+                      </div>
+                    </div>
+                    <div class="w-full lg:w-4/12 px-4 lg:order-1">
+                    </div>
+                  </div>
+                  <div class="text-center mt-12">
+                    <h3 class="text-4xl font-semibold leading-normal mb-2 text-blueGray-700">
+                        {{$user->name}}
+                    </h3>
+                    
+                    <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
+                      <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
+                      {{$user->pais->name}}
+                    </div>
+        
+                    <div class="flex justify-center text-sm text-gray-400 py-1 container">
+                        <div class="flex  mr-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path
+                                    d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z">
+                                </path>
+                            </svg>
+                            <p class="">1.2k Following</p>
+                        </div>
+                        <div class="flex ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="">14 posts</p>
+                        </div>
+                        
+                    </div>
             
-            <div class="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
-              <i class="fas fa-map-marker-alt mr-2 text-lg text-blueGray-400"></i>
-              {{$user->pais->name}}
-            </div>
-
-            <div class="flex justify-center text-sm text-gray-400 py-1 container">
-                <div class="flex  mr-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path
-                            d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z">
-                        </path>
-                    </svg>
-                    <p class="">1.2k Following</p>
+                  </div>
+                  <div class="mt-4 py-10 border-t border-blueGray-200 text-center">
+                    
+                    <div class="flex flex-wrap justify-center">
+        
+                      <div class="w-full lg:w-9/12 px-4">
+                        @livewire('profile.edit-biografia')
+                        <p class="mb-4 text-lg leading-relaxed text-blueGray-700 text-center">
+                            {{$user->biografia}}
+                        </p>
+        
+                      </div>
+        
+                    </div>
+        
+                    
+                  </div>
                 </div>
-                <div class="flex ">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
-                        fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                    <p class="">14 posts</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+     
+    </div>
+
+
+		<div class="p-3 bg-white" id="posted">
+			<div class="bg-white p-8 rounded-lg shadow-md shadow-slate-600 mb-4">
+        @foreach($publicaciones as $publicacion)
+
+        <div class="mb-4">
+          <div class="mb-1">
+            <p class="text-gray-800"> {{$publicacion->contenido}}
+            </p>
+          </div>
+
+
+          <div class=" bg-white p-3">
+
+            <video  class="player h-48 w-full aspect-video"  controls crossorigin playsinline >
+            <source src="{{ Storage::url($publicacion->profile) }}" type="video/mp4" size="576">
+            </video>
+          </div> 
+
+          <div class="flex items-center justify-between text-gray-500">
+            <div class="flex items-center space-x-2">
+              <button class="flex justify-center items-center gap-2 px-2 hover:bg-gray-50 rounded-full p-1">
+                <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M12 21.35l-1.45-1.32C6.11 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-4.11 6.86-8.55 11.54L12 21.35z" />
+                </svg>
+                <span>42 Likes</span>
+              </button>
+            </div>
+            <button class="flex justify-center items-center gap-2 px-2 hover:bg-gray-50 rounded-full p-1">
+              <svg width="22px" height="22px" viewBox="0 0 24 24" class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22ZM8 13.25C7.58579 13.25 7.25 13.5858 7.25 14C7.25 14.4142 7.58579 14.75 8 14.75H13.5C13.9142 14.75 14.25 14.4142 14.25 14C14.25 13.5858 13.9142 13.25 13.5 13.25H8ZM7.25 10.5C7.25 10.0858 7.58579 9.75 8 9.75H16C16.4142 9.75 16.75 10.0858 16.75 10.5C16.75 10.9142 16.4142 11.25 16 11.25H8C7.58579 11.25 7.25 10.9142 7.25 10.5Z"></path>
+                </g>
+              </svg>
+              <span>3 Comment</span>
+            </button>
+          </div>
+
+        </div>
+
+            
+        @endforeach
+			</div>
+		</div>
+
+
+    <div class="modal fade z-0 " id="modal"  role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Actualizar foto de portada</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="img-container">
+              <div class="row">
+                <div class="col-md-8">
+                  <img id="image" src="https://avatars0.githubusercontent.com/u/3456749">
                 </div>
-                
-            </div>
-    
-          </div>
-          <div class="mt-4 py-10 border-t border-blueGray-200 text-center">
-            <div class="flex flex-wrap justify-center">
-              <div class="w-full lg:w-9/12 px-4">
-                <p class="mb-4 text-lg leading-relaxed text-blueGray-700 text-center">
-                    {{$user->biografia}}
-                </p>
-                
-                      
+                <div class="col-md-4">
+                  <div class="preview"></div>
+                </div>
               </div>
             </div>
           </div>
-            </div>
-          </div>
-
-          <div class="flex w-full flex-wrap content-center justify-center  bg-gray-50">
-            <div class="grid grid-cols-3 gap-3">
-
-              <div class="w-80 bg-white p-3">
-                <img class="h-52 w-full object-cover" src="https://i.imgur.com/5yeBVeM.jpeg" />
-                <ul class="mt-3 flex flex-wrap">
-                  <li class="mr-auto">
-                    
-                  </li>
-                  
-                  <li class="mr-2">
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-                </ul>
-              </div>
-          
-              <div class="w-80 bg-white p-3">
-                <img class="h-52 w-full object-cover" src="https://i.imgur.com/5yeBVeM.jpeg" />
-                <ul class="mt-3 flex flex-wrap">
-                  <li class="mr-auto">
-                    
-                  </li>
-                  
-                  <li class="mr-2">
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-                </ul>
-              </div>
-          
-              <div class="w-80 bg-white p-3">
-                <img class="h-52 w-full object-cover" src="https://i.imgur.com/5yeBVeM.jpeg" />
-                <ul class="mt-3 flex flex-wrap">
-                  <li class="mr-auto">
-                    
-                  </li>
-                  
-                  <li class="mr-2">
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-
-                  
-                  
-                  <li>
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-                </ul>
-              </div>
-          
-           
-              <div class="w-80 bg-white p-3">
-                <img class="h-52 w-full object-cover" src="https://i.imgur.com/5yeBVeM.jpeg" />
-                <ul class="mt-3 flex flex-wrap">
-                  <li class="mr-auto">
-                    
-                  </li>
-                  
-                  <li class="mr-2">
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M9,22A1,1 0 0,1 8,21V18H4A2,2 0 0,1 2,16V4C2,2.89 2.9,2 4,2H20A2,2 0 0,1 22,4V16A2,2 0 0,1 20,18H13.9L10.2,21.71C10,21.9 9.75,22 9.5,22V22H9Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="flex text-gray-400 hover:text-gray-600">
-                      <svg class="mr-0.5" style="width:24px;height:24px" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z" />
-                      </svg>
-                      3
-                    </a>
-                  </li>
-                </ul>
-              </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" id="crop">Guardar</button>
           </div>
         </div>
       </div>
     </div>
+
+    
+	</div>
+</div>
+
+
   
-  </section>
 
   @push('script')
+
+  
+
+
+
+  <script>
+    // Change the second argument to your options:
+// https://github.com/sampotts/plyr/#options
+
+
+ // new Plyr('video', {captions: {active: true}});
+
+  const player = Array.from(document.querySelectorAll('video')).map((p) => new Plyr(p), {captions: {active: true}});
+
+ // const players = Array.from(document.querySelectorAll('.js-player')).map((p) => new Plyr(p));
+
+window.player = player;
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/hls.js@latest"></script>
+      {{-- plyr--}}
+    <script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+
+
+
+
 
     <script>
 
@@ -298,12 +295,16 @@
       var image = document.getElementById('image');
       var cropper;
 
-      console.log('hh')
+     
 
       $("body").on("change", ".image", function(e){
+
+
           var files = e.target.files;
           var done = function (url) {
               image.src = url;
+
+           
               $modal.modal('show');
           };
 
@@ -311,22 +312,29 @@
           var file;
           var url;
 
-          if (files && files.length > 0) {
+         if (files && files.length > 0) {
               file = files[0];
-
               if (URL) {
                   done(URL.createObjectURL(file));
+                  
               } else if (FileReader) {
                   reader = new FileReader();
                   reader.onload = function (e) {
                       done(reader.result);
+
+       
                   };
               reader.readAsDataURL(file);
               }
+
+             
           }
       });
 
       $modal.on('shown.bs.modal', function () {
+
+      
+
           cropper = new Cropper(image, {
               aspectRatio: 0,
               viewMode: 3,
@@ -344,7 +352,14 @@
           });
 
           canvas.toBlob(function(blob) {
+
+    
+
               url = URL.createObjectURL(blob);
+
+              console.log(url)
+
+              console.log(url)
               var reader = new FileReader();
               reader.readAsDataURL(blob);
               reader.onloadend = function() {
@@ -357,19 +372,8 @@
                       success: function(data){
                           console.log(data);
                           $modal.modal('hide');
-                         // return axios.get(route('profile_user'))
-
+   
                           window.location.href = "http://privatesocial.test/profile_user";
-
-                         
-                         // livewire.emitTo('profile.index','render')
-
-                         // Livewire.emit('refreshMarketplace');
-
-                       
-
-                          //Livewire.emit('profile.index');
-
                  
                       }
                   });

@@ -8,21 +8,21 @@
     left: 100%;
 }
 </style>
-<div>
+<div class="font-general">
     <div class="py-3 px-5 bg-white rounded shadow-sm ">
-        <div class="-mx-1">
-            <ul class="flex w-full flex-wrap items-center h-16 container mt-1">
+        <div class="">
+            <ul class="flex w-full flex-wrap items-center h-8 container">
 
                 <li class="flex-1 block relative ">
                     <div class="flex">
 
                         <a href="{{route('home')}}" class="rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100 mr-2">
-                            <img src="{{URL::asset('imagen/Private Social 4.png')}}" class="block h-14 w-28 md:h-16 md:w-36 ">
+                            <img src="{{URL::asset('imagen/Private Social 4.png')}}" class="block -mt-10 h-14 w-28 md:h-16 md:w-36 ">
                             
                         
                         </a>
     
-                        <div class="hidden lg:block mt-3 ml-4 w-2/5">
+                        <div class="hidden lg:block  ml-4 w-2/5 -mt-5">
 
                             @livewire('buscar')
 
@@ -32,26 +32,25 @@
                 </li>
 
 
-                <li class="block relative mr-0 mt-2 md:mr-2">
+                <li class="block relative mr-0 md:mr-2 -mt-4">
                     <a href="{{route('home')}}" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
 
-                                <svg class=" w-6 h-6 mx-auto text-gray-600" viewBox="0 0 20 20"  xmlns="http://www.w3.org/2000/svg"><path d="m18.65 11.35-8.65-8.64-8.65 8.64-.7-.7 9.35-9.36 9.35 9.36z"/><path d="m15 4h3v3h-1v-2h-2z"/><path d="m3 11h1v7h3v-6h5v6h4v-7h1v8h-6v-6h-3v6h-5z"/></svg>
-
-                                <p class="mx-auto hidden md:block md:mx-auto text-gray-600 text-sm">Inicio</p>
+                               
+                                <svg class="w-6 h-6 mx-auto text-gray-600" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="m280.37 148.26-184.37 151.85v163.89a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16v-95.71a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05l112.02.31a16 16 0 0 0 16-16v-164l-184.33-151.74a12.19 12.19 0 0 0 -15.3 0zm291.23 103.21-83.6-68.91v-138.51a12 12 0 0 0 -12-12h-56a12 12 0 0 0 -12 12v72.61l-89.53-73.66a48 48 0 0 0 -61 0l-253.13 208.47a12 12 0 0 0 -1.6 16.9l25.5 31a12 12 0 0 0 16.91 1.63l235.22-193.74a12.19 12.19 0 0 1 15.3 0l235.23 193.74a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0 -1.7-16.93z"/></svg>
+                                <p class="mx-auto hidden md:block md:mx-auto text-black text-sm">Inicio</p>
                             </div>
                     </a>
                 </li>
 
 
 
-                <li class="block relative mr-0 md:mr-2 mt-2" x-data="{showChildren:false}" @click.away="showChildren=false">
+                <li class="block relative mr-0 md:mr-2 -mt-4 " x-data="{showChildren:false}" @click.away="showChildren=false">
                     <a href="#" class="h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100" @click.prevent="showChildren=!showChildren">
                         <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
-                            <svg class=" w-6 h-6 mx-auto text-gray-500"  enable-background="new 0 0 32 32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="m31.36 16c0-.655-.466-1.203-1.083-1.331-.273-2.952-1.425-5.686-3.349-7.947.132-.21.212-.456.212-.722 0-.75-.61-1.36-1.36-1.36s-1.36.61-1.36 1.36.61 1.36 1.36 1.36c.222 0 .43-.059.615-.154.389.459.749.936 1.07 1.434h-4.292c-1.233-3.54-3.333-6.102-5.828-6.791-.076-.678-.647-1.209-1.345-1.209-.657 0-1.206.468-1.332 1.089-7.329.679-13.028 6.88-13.028 14.271s5.699 13.592 13.027 14.272c.126.62.675 1.089 1.332 1.089.656 0 1.205-.467 1.332-1.086 6.826-.635 12.304-6.114 12.94-12.942.621-.127 1.089-.676 1.089-1.333zm-6.219-10c0-.353.287-.64.64-.64s.639.287.639.64-.287.64-.64.64-.639-.287-.639-.64zm2.752 3.36c.921 1.641 1.488 3.451 1.666 5.36-.421.145-.745.488-.865.92h-4.344c-.033-2.252-.369-4.386-.947-6.28zm-3.587 13.28c-.1-.363-.346-.662-.671-.836.447-1.739.687-3.566.714-5.444h4.345c.119.43.442.773.86.919-.181 1.929-.764 3.745-1.673 5.361zm-7.946 6.054v-5.334h5.334c.076.275.235.513.451.689-1.191 2.881-2.956 4.81-4.91 5.388-.166-.362-.486-.635-.875-.743zm-1.593.741c-2.179-.64-4.037-2.908-5.18-6.074h6.053v5.334c-.388.107-.707.379-.873.74zm-12.39-13.075h4.317c.132.476.512.848.995.961.101 1.902.418 3.699.911 5.318h-4.483c-1.056-1.874-1.679-4.011-1.74-6.279zm13.263-13.055v5.335h-6.053c1.143-3.167 3.001-5.435 5.18-6.075.166.361.485.633.873.74zm0 6.055v6.28h-6.335c-.122-.443-.461-.792-.896-.93.102-1.925.425-3.738.93-5.35zm7.292 12.287c-.594.03-1.084.44-1.237.993h-5.335v-6.28h7.268c-.027 1.824-.26 3.599-.696 5.287zm-6.572-6.007v-6.28h6.302c.589 1.875.935 4.013.969 6.28zm-8.36 1c-.353 0-.64-.287-.64-.64s.287-.64.64-.64.64.287.64.64-.287.64-.64.64zm-.31-1.961c-.483.114-.863.485-.995.961h-4.318c.06-2.268.684-4.406 1.74-6.28h4.484c-.493 1.619-.81 3.417-.911 5.319zm.719 2.612c.436-.139.774-.488.896-.931h6.335v6.28h-6.301c-.506-1.612-.828-3.425-.93-5.349zm13.951 5.709c0-.353.287-.64.64-.64s.64.287.64.64-.287.64-.64.64-.64-.287-.64-.64zm.061-14.36h-6.061v-5.335c.389-.107.707-.379.873-.74 2.193.643 4.047 2.917 5.188 6.075zm-6.421-7.28c.353 0 .64.287.64.64s-.287.64-.64.64-.64-.287-.64-.64.287-.64.64-.64zm-3.246 1.417c-1.644 1.191-3.011 3.264-3.917 5.863h-4.298c1.861-2.878 4.78-5.019 8.215-5.863zm-8.214 20.583h4.298c.906 2.599 2.273 4.672 3.918 5.862-3.437-.843-6.356-2.983-8.216-5.862zm11.46 7.28c-.353 0-.64-.287-.64-.64s.287-.64.64-.64.64.287.64.64-.287.64-.64.64zm3.233-1.41c1.421-1.02 2.66-2.698 3.57-4.89.065.01.13.02.198.02.624 0 1.147-.425 1.306-1h3.132c-1.869 2.885-4.786 5.03-8.206 5.87zm10.767-12.59c-.353 0-.64-.287-.64-.64s.287-.64.64-.64.64.287.64.64-.287.64-.64.64z"/><path d="m0 0h32v32h-32z" fill="none"/></svg>
                            
- 
-                            <p class="mx-auto hidden md:block md:mx-auto text-gray-600 text-sm">Idiomas</p>
+                            <svg class=" w-6 h-6 mx-auto text-gray-500" fill="none"  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" fill="#000" r="10"/><g stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m2 12h20"/><path d="m12 23s5-5.4444 5-11c0-5.55556-5-11-5-11"/><path d="m12 23s-5-5.4444-5-11c0-5.55556 5-11 5-11"/></g></svg>
+                            <p class="mx-auto hidden md:block md:mx-auto text-black text-sm">Idiomas</p>
            
 
                         </div>
@@ -75,17 +74,14 @@
                     </div>
                 </li>
 
-                <li class="block relative mr-0 md:mr-2 mt-2">
+                <li class="block relative mr-0 md:mr-2 -mt-4">
                     <a href="{{route('creadores.index')}}" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                                 
-                                <svg  class=" w-6 h-6 mx-auto text-gray-600" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 20V19C1 15.134 4.13401 12 8 12V12C11.866 12 15 15.134 15 19V20" stroke="currentColor" stroke-linecap="round"/>
-                                    <path d="M13 14V14C13 11.2386 15.2386 9 18 9V9C20.7614 9 23 11.2386 23 14V14.5" stroke="currentColor" stroke-linecap="round"/>
-                                    <path d="M8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M18 9C19.6569 9 21 7.65685 21 6C21 4.34315 19.6569 3 18 3C16.3431 3 15 4.34315 15 6C15 7.65685 16.3431 9 18 9Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
+                      
                                     
+
+                                    <svg class=" w-6 h-6 mx-auto text-black" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="m8.49578666 8c.82842712 0 1.5.67157288 1.5 1.5l-.00078253.7483651c.10287167 1.8365588-1.31166527 2.752445-3.93481052 2.752445-2.61467435 0-4.06019361-.9039022-4.06019361-2.726236v-.7745741c0-.82842712.67157288-1.5 1.5-1.5zm4.00060194 0c.8284271 0 1.5.67157288 1.5 1.5l-.0007513.5265728c.0904148 1.6474623-1.1594628 2.4734272-3.4440428 2.4734272-.3101233 0-.60166782-.0151086-.87393931-.0453403.53670921-.4956236.82381451-1.1682013.82283521-2.0180908l-.0062688-.2161666.0015651-.7204023c0-.59757013-.2620738-1.13392965-.67755473-1.50041196zm-6.4963886-6c1.38093559 0 2.50040506 1.11946948 2.50040506 2.50040506 0 1.38093559-1.11946947 2.50040507-2.50040506 2.50040507s-2.50040506-1.11946948-2.50040506-2.50040507c0-1.38093558 1.11946947-2.50040506 2.50040506-2.50040506zm5 1c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2z" fill="#212121"/></svg>
                                   
                                 
                                     <p class="mx-auto hidden md:block md:mx-auto text-gray-600 text-sm">Creadores</p>
@@ -93,29 +89,31 @@
                     </a>
                 </li>
 
-                <li class="block relative mr-0 md:mr-2 mt-2">
+                <li class="block relative mr-0 md:mr-2 -mt-4">
                     <a href="#" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
 
-                                <svg class=" w-6 h-6 mx-auto text-gray-600"  viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="m226.24072 189.28271a76.00889 76.00889 0 0 0 -59.4834-112.96671 75.99462 75.99462 0 1 0 -136.998 64.96667l-6.6377 23.2334a9.99929 9.99929 0 0 0 12.36133 12.36328l23.23438-6.63818a75.8485 75.8485 0 0 0 30.49267 9.44926 76.04093 76.04093 0 0 0 108.07275 38.55029l23.23438 6.63867a9.9987 9.9987 0 0 0 12.36133-12.3623zm-166.98926-27.35449a3.99738 3.99738 0 0 0 -1.09863.15381l-24.86719 7.105a2 2 0 0 1 -2.47265-2.47265l7.10449-24.86719a4.00117 4.00117 0 0 0 -.40723-3.14307 67.97064 67.97064 0 1 1 23.78614 23.78613 4.00029 4.00029 0 0 0 -2.04493-.56203zm165.42676 54.75a1.96577 1.96577 0 0 1 -1.96386.50879l-24.86719-7.10449a3.99913 3.99913 0 0 0 -3.14356.4082 68.0381 68.0381 0 0 1 -96.70752-30.54126 75.97949 75.97949 0 0 0 71.50635-95.27636 68.01461 68.01461 0 0 1 48.98828 102.03051 3.99743 3.99743 0 0 0 -.4082 3.14307l7.10449 24.86865a1.96026 1.96026 0 0 1 -.50879 1.96289z"/></svg>
+                            
 
+                                <svg class=" w-6 h-6 mx-auto text-black"  fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 10c0-4.005 3.732-7 8-7s8 2.995 8 7-3.732 7-8 7a8.973 8.973 0 01-3.228-.592l-3.614.58a1 1 0 01-1.113-1.286l.8-2.563A6.285 6.285 0 012 10zm8 8.167c-.942 0-1.855-.123-2.716-.351C8.736 19.763 11.257 21 14 21c1.145 0 2.237-.21 3.228-.592l3.614.58a1 1 0 001.113-1.286l-.8-2.563A6.285 6.285 0 0022 14c0-2.172-1.098-4.047-2.783-5.308.076.424.116.86.116 1.308 0 4.673-4.353 8.167-9.333 8.167z" fill="currentColor"/></svg>
                                     <p class="mx-auto hidden md:block md:mx-auto text-gray-600 text-sm">Chat</p>
                             </div>
                     </a>
                 </li>
 
-                <li class="block relative mr-0 md:mr-2 mt-2">
+                <li class="block relative mr-0 md:mr-2 -mt-4">
                     <a href="#" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
 
-                                <svg class=" w-6 h-6 mx-auto text-gray-600"   viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="m2.41547595 3.5h10.16904815c.9116644 0 1.6507144.73905002 1.6507144 1.65071443 0 .299182-.0813106.59273912-.2352385.84928557-.9815222 1.63587038-1.5 3.50773964-1.5 5.4154759v1.0845241c0 2.209139-1.790861 4-4 4h-2c-2.209139 0-4-1.790861-4-4v-1.0845241c0-1.90773626-.51847777-3.77960552-1.5-5.4154759-.46904747-.78174578-.2155554-1.79571405.56619038-2.26476152.25654645-.15392786.55010357-.23523848.84928557-.23523848zm2.58452405-1.5c.66666667-1 1.5-1.5 2.5-1.5s1.83333333.5 2.5 1.5" fill="none" stroke="#2a2e3b" stroke-linecap="round" stroke-linejoin="round" transform="matrix(-1 0 0 -1 18 19)"/></svg>
+                        
 
+                                <svg class=" w-6 h-6 mx-auto text-black"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M4 8a6 6 0 0 1 4.03-5.67 2 2 0 1 1 3.95 0A6 6 0 0 1 16 8v6l3 2v1H1v-1l3-2V8zm8 10a2 2 0 1 1-4 0h4z"/></svg>
                                     <p class="mx-auto hidden md:block md:mx-auto  text-gray-600 text-sm">Notificaciones</p>
                             </div>
                     </a>
                 </li>
 
-                <li class="block relative" x-data="{showChildren:false}" @click.away="showChildren=false">
+                <li class="block relative -mt-8" x-data="{showChildren:false}" @click.away="showChildren=false">
                     <div class="mx-2 relative">
 
                         <div class="flex">
@@ -189,7 +187,7 @@
 <!-- BUY ME A BEER AND HELP SUPPORT OPEN-SOURCE RESOURCES -->
 <div class="flex items-end justify-end fixed bottom-0 right-0 mb-4 mr-4 z-10">
     <div>
-        <a title="Buy me a beer" href="#" target="_blank" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
+        <a title="Buy me a beer" href="{{route('profile_user.add_public')}}" class="block w-16 h-16 rounded-full transition-all shadow hover:shadow-lg transform hover:scale-110 hover:rotate-12">
             <img class="object-cover object-center w-full h-full rounded-full" src="{{URL::asset('imagen/anadir.png')}}"/>
         </a>
     </div>

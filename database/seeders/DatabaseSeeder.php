@@ -17,8 +17,11 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeedder::class);
         $this->call(PaisSeeder::class);
+        $this->call(GenerSeeder::class);
 
         $this->call(CreadorsSeedder::class);
+
+        $this->call(CategoriasSeeder::class);
 
         // \App\Models\User::factory(10)->create();
 

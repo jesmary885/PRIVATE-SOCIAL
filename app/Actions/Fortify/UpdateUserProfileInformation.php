@@ -45,8 +45,8 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             $user->forceFill([
                 'name' => $input['name'],
                 'email' => $input['email'],
-                'genero' => $input['genero'],
                 'pais_id' => $input['pais_id'],
+                'gener_id' => $input['gener_id'],
             ])->save();
        // }
     }
@@ -61,8 +61,9 @@ class UpdateUserProfileInformation implements UpdatesUserProfileInformation
             'name' => $input['name'],
             'email' => $input['email'],
             'email_verified_at' => null,
-            'genero' => $input['genero'],
+            'gener_id' => $input['gener_id'],
             'pais_id' => $input['pais_id'],
+            'gener_id' => $input['gener_id'],
         ])->save();
 
         $user->sendEmailVerificationNotification();

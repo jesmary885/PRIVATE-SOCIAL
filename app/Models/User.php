@@ -60,6 +60,10 @@ class User extends Authenticatable
         return $this->belongsTo(Pais::class);
     }
 
+    public function gener(){
+        return $this->belongsTo(Gener::class);
+    }
+
     //Relacion uno a muchos
     public function Creadors(){
         return $this->hasMany(Creador::class);

@@ -17,6 +17,9 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                header: ['Josefin', 'Josefin Sans'],
+                subtitulo: ['Dancing','Dancing Script'],
+                general : ['Tinos','Tinos']
             },
 
             colors: {

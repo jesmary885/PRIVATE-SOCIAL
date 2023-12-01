@@ -1,11 +1,15 @@
 <x-app-layout>
 
-    <div class="mb-4">
-        <img class=" w-full h-72  " src="/imagen/plantilla-rebajas-primavera-diseno-plano_23-2150071065.avif" alt="" />
-        <img src="" alt="">
+    <div class="mb-4 ">
+
+        <video autoplay loop muted class="w-full h-96  object-cover -mt-16 ">
+            <source src="/imagen/BANNER_interno.mp4" type="video/mp4" />
+          
+          </video>
+
     </div>
 
-    <div class="grid grid-cols-6 h-full container">
+    <div class="grid grid-cols-6 h-full container font-general">
 
 
         <div class="bg-gray-100 rounded-lg shadow-md col-span-2 mt-2">
@@ -13,23 +17,19 @@
             
 
             <div class="flex flex-col justify-center items-center">
-                <div
-                    class="relative flex max-w-[500px] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none"
-                >
-                    <div
-                    class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none"
-                    >
-                    <h4 class="text-lg font-bold text-navy-700 dark:text-white">
+                <div class="relative flex max-w-[500px] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none" >
+                    <div class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
+                    <h4 class="text-lg font-bold text-navy-700 dark:text-white font-general">
                         Perfiles más populares
                     </h4>
 
                     <a href="#" class="flex items-center h-10 leading-10 px-4 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1" @click.prevent="showChildren=!showChildren">
 
-                        <span class="ml-3 text-md text-blue-600">Ver todo</span>
+                        <span class="ml-3 text-md text-blue-600 font-general">Ver todo</span>
 
                     </a>
 
-                    </div>
+                </div>
                     <div class="w-full overflow-x-scroll px-4 md:overflow-x-hidden">
                     <table role="table" class="w-full min-w-[500px] overflow-x-scroll">
                         <thead>
@@ -41,7 +41,7 @@
                             style="cursor: pointer"
                             >
                             <div
-                                class="flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xs"
+                                class=" font-general flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xs"
                             >
                                 Creador
                             </div>
@@ -252,18 +252,18 @@
 
 
             <div class="flex flex-col mt-2 justify-center items-center">
-                <div class="relative flex flex-col items-center rounded-[10px] border-[1px] border-gray-200 w-full mx-auto p-4 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
-                    <div class="flex items-center justify-between rounded-t-3xl p-3 w-full">
-                        <div class="text-lg font-bold text-navy-700 dark:text-white">
+                <div class="relative flex max-w-[500px] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
+                    <div class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
+                        <h4 class="text-lg font-bold text-navy-700 dark:text-white font-general">
                             Solicitudes de conexión
-                        </div>
-
+                        </h4>
+    
                         <a href="#" class="flex items-center h-10 leading-10 px-4 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1" @click.prevent="showChildren=!showChildren">
-
-                            <span class="ml-3 text-md text-blue-600">Ver todo</span>
+    
+                            <span class="ml-3 text-md text-blue-600 font-general">Ver todo</span>
     
                         </a>
-                       
+    
                     </div>
                     <div class="flex h-full w-full items-start justify-between rounded-md border-[1px] border-[transparent] dark:hover:border-white/20 bg-white px-3 py-[20px] transition-all duration-150 hover:border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
                         <div class="flex items-center gap-3">
@@ -433,101 +433,324 @@
 
         <div class="bg-gray-100 col-span-1 rounded-lg shadow-md mt-2 ">
 
-            <div class=" bg-white border-l border-r sm:w-48 w-48 dark:bg-gray-900 dark:border-gray-700 mb-2">
-                <div class="flex flex-row bg-white shadow-sm rounded p-4">
-                  <div class="flex items-center justify-center flex-shrink-0 h-12 w-10 rounded-xl bg-green-100 text-green-500">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                  </div>
-                  <div class="flex flex-col flex-grow ml-2">
-                    <h2 class="px-1 text-md font-medium text-gray-800 dark:text-white">Balance</h2>
-                    <div class="font-bold text-lg">$ 120</div>
-                  </div>
-                </div>
-            </div>
+       
 
-            <div class=" py-8 overflow-y-auto bg-white border-l border-r sm:w-48 w-48 dark:bg-gray-900 dark:border-gray-700">
-                <h2 class="px-5 text-lg font-medium text-gray-800 dark:text-white">Contactos</h2>
-        
-                <div class="mt-8 space-y-4">
-                    <button class="flex items-center w-full px-5 py-2 transition-colors duration-200 dark:hover:bg-gray-800 gap-x-2 hover:bg-gray-100 focus:outline-none">
-                        <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=faceare&facepad=3&w=688&h=688&q=100" alt="">
-                    
-                        <div class="text-left rtl:text-right">
-                            <h1 class="text-sm font-medium text-gray-700 capitalize dark:text-white">Mia John</h1>
-            
-                            <p class="text-xs text-gray-500 dark:text-gray-400">11.2 Followers</p>
-                        </div>
-                    </button>
-        
-                    <button class="flex items-center w-full px-5 py-2 transition-colors duration-200 dark:hover:bg-gray-800 gap-x-2 hover:bg-gray-100 focus:outline-none">
-                        <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&h=880&q=80" alt="">
-                    
-                        <div class="text-left rtl:text-right">
-                            <h1 class="text-sm font-medium text-gray-700 capitalize dark:text-white">arthur melo</h1>
-            
-                            <p class="text-xs text-gray-500 dark:text-gray-400">1.2 Followers</p>
-                        </div>
-                    </button>
-        
-                    <button class="flex items-center w-full px-5 py-2 transition-colors duration-200 bg-gray-100 dark:bg-gray-800 gap-x-2 focus:outline-none">
-                        <div class="relative">
-                            <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="">
-                            <span class="h-2 w-2 rounded-full bg-emerald-500 absolute right-0.5 ring-1 ring-white bottom-0"></span>
-                        </div>
-        
-                        <div class="text-left rtl:text-right">
-                            <h1 class="text-sm font-medium text-gray-700 capitalize dark:text-white">Jane Doe</h1>
-            
-                            <p class="text-xs text-gray-500 dark:text-gray-400">15.6 Followers</p>
-                        </div>
-                    </button>
-        
-                    <button class="flex items-center w-full px-5 py-2 transition-colors duration-200 dark:hover:bg-gray-800 gap-x-2 hover:bg-gray-100 focus:outline-none">
-                        <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=80" alt="">
-                    
-                        <div class="text-left rtl:text-right">
-                            <h1 class="text-sm font-medium text-gray-700 capitalize dark:text-white">Amelia. Anderson</h1>
-            
-                            <p class="text-xs text-gray-500 dark:text-gray-400">32.9 Followers</p>
-                        </div>
-                    </button>
-        
-                    <button class="flex items-center w-full px-5 py-2 transition-colors duration-200 dark:hover:bg-gray-800 gap-x-2 hover:bg-gray-100 focus:outline-none">
-                        <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&h=687&q=80" alt="">
-                    
-                        <div class="text-left rtl:text-right">
-                            <h1 class="text-sm font-medium text-gray-700 capitalize dark:text-white">Joseph Gonzalez</h1>
-            
-                            <p class="text-xs text-gray-500 dark:text-gray-400">100.2 Followers</p>
-                        </div>
-                    </button>
-        
-                    <button class="flex items-center w-full px-5 py-2 transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800 gap-x-2 focus:outline-none">
-                        <div class="relative">
-                            <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&h=1470&q=80" alt="">
-                            <span class="h-2 w-2 rounded-full bg-emerald-500 absolute right-0.5 ring-1 ring-white bottom-0"></span>
-                        </div>
-        
-                        <div class="text-left rtl:text-right">
-                            <h1 class="text-sm font-medium text-gray-700 capitalize dark:text-white">Olivia Wathan</h1>
-            
-                            <p class="text-xs text-gray-500 dark:text-gray-400">8.6 Followers</p>
-                        </div>
-                    </button>
-        
-                    <button class="flex items-center w-full px-5 py-2 transition-colors duration-200 hover:bg-gray-100 dark:hover:bg-gray-800 gap-x-2 focus:outline-none">
-                        <div class="relative">
-                            <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1608174386344-80898cec6beb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&h=687&q=80" alt="">
-                            <span class="h-2 w-2 rounded-full bg-emerald-500 absolute right-0.5 ring-1 ring-white bottom-0"></span>
-                        </div>
-        
-                        <div class="text-left rtl:text-right">
-                            <h1 class="text-sm font-medium text-gray-700 capitalize dark:text-white">Junior REIS</h1>
-            
-                            <p class="text-xs text-gray-500 dark:text-gray-400">56.6 Followers</p>
-                        </div>
-                    </button>
+            <div class="flex flex-col justify-center items-center">
+                <div class="relative flex max-w-[500px] h-[520px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none" >
+                    <div class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
+                    <h4 class="text-lg font-bold text-navy-700 dark:text-white font-general">
+                        Contactos
+                    </h4>
+
+                  
+
                 </div>
+                    <div class="w-full overflow-x-scroll px-4 md:overflow-x-hidden">
+                    <table role="table" class="w-full min-w-[500px] overflow-x-scroll">
+                        <thead>
+                        <tr role="row">
+                            <th
+                            colspan="1"
+                            role="columnheader"
+                            title="Toggle SortBy"
+                            style="cursor: pointer"
+                            >
+                            <div
+                                class=" font-general flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xs"
+                            >
+                                
+                            </div>
+                            </th>
+                            
+                        
+                        </tr>
+                        </thead>
+                        <tbody role="rowgroup" class="px-4">
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2244&amp;q=80"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @maddison_c21
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                9821
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1780&amp;q=80"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @karl.will02
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                7032
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1780&amp;q=80"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @karl.will02
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                7032
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1780&amp;q=80"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @karl.will02
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                7032
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1780&amp;q=80"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @karl.will02
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                7032
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1573766064535-6d5d4e62bf9d?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1315&amp;q=80"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @andreea.1z
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                5204
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-1.2.1&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1780&amp;q=80"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @abraham47.y
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                4309
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="flex items-center gap-2">
+                                <div class="h-[30px] w-[30px] rounded-full">
+                                <img
+                                    src="https://i.ibb.co/7p0d1Cd/Frame-24.png"
+                                    class="h-full w-full rounded-full"
+                                    alt=""
+                                />
+                                </div>
+                                <p
+                                class="text-sm font-medium text-navy-700 dark:text-white"
+                                >
+                                @simmmple.web
+                                </p>
+                            </div>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <p class="text-md font-medium text-gray-600 dark:text-white">
+                                3871
+                            </p>
+                            </td>
+                            <td class="py-3 text-sm" role="cell">
+                            <div class="mx-2 flex font-bold">
+                                <div
+                                class="h-2 w-16 rounded-full bg-gray-200 dark:bg-navy-700"
+                                >
+                                <div
+                                    class="flex h-full items-center justify-center rounded-md bg-brand-500 dark:bg-brand-400"
+                                    style="width: 30%"
+                                ></div>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+              
             </div>
 
             

@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('genero')->nullable();
             $table->date('fecha_nacimiento')->nullable();
 
             $table->unsignedBigInteger('pais_id')->nullable();
             $table->foreign('pais_id')->references('id')->on('pais');
+
+            $table->unsignedBigInteger('gener_id')->nullable();
+            $table->foreign('gener_id')->references('id')->on('geners');
 
             $table->string('estado');
 
