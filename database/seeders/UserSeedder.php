@@ -18,6 +18,8 @@ class UserSeedder extends Seeder
             'email' => 'user1@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
+            
+            'balance' => 100,
             'codigo_referido' => 'ps00000000000001',
             'biografia' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsam laboriosam pariatur inventore eligendi? Ipsum, necessitatibus? Vero deleniti necessitatibus fugiat vel explicabo temporibus dolorum reprehenderit modi eaque illo, excepturi amet!'
 
@@ -28,6 +30,7 @@ class UserSeedder extends Seeder
             'email' => 'user2@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
+            'balance' => 100,
             'codigo_referido' => 'ps00000000000001',
             'biografia' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsam laboriosam pariatur inventore eligendi? Ipsum, necessitatibus? Vero deleniti necessitatibus fugiat vel explicabo temporibus dolorum reprehenderit modi eaque illo, excepturi amet!',
 
@@ -38,6 +41,7 @@ class UserSeedder extends Seeder
             'email' => 'user3@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
+            'balance' => 100,
             'codigo_referido' => 'ps00000000000001',
             'biografia' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsam laboriosam pariatur inventore eligendi? Ipsum, necessitatibus? Vero deleniti necessitatibus fugiat vel explicabo temporibus dolorum reprehenderit modi eaque illo, excepturi amet!',
 
@@ -49,6 +53,7 @@ class UserSeedder extends Seeder
             'email' => 'user4@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
+            'balance' => 100,
             'codigo_referido' => 'ps00000000000001',
             'biografia' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsam laboriosam pariatur inventore eligendi? Ipsum, necessitatibus? Vero deleniti necessitatibus fugiat vel explicabo temporibus dolorum reprehenderit modi eaque illo, excepturi amet!',
 
@@ -59,6 +64,7 @@ class UserSeedder extends Seeder
             'email' => 'user5@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
+            'balance' => 100,
             'codigo_referido' => 'ps00000000000001',
             'biografia' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ipsam laboriosam pariatur inventore eligendi? Ipsum, necessitatibus? Vero deleniti necessitatibus fugiat vel explicabo temporibus dolorum reprehenderit modi eaque illo, excepturi amet!',
 

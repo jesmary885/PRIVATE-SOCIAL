@@ -13,7 +13,7 @@
 
         <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">.  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href='https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,300;0,700;1,400;1,700&display=swap'
@@ -22,6 +22,10 @@
         <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:ital,wght@0,100;0,300;0,700;1,400;1,700&display=swap'>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script&family=Josefin+Sans:ital,wght@0,100;0,300;0,700;1,400;1,700&family=Tinos:wght@400;700&display=swap">
      
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -48,10 +52,9 @@
     </head>
     <body class="font-sans antialiased">
 
-        <div class="min-h-screen bg-gray-100 relative" >
+        <div >
             @livewire('navigation')
 
-            <!-- Page Content -->
             <main>
                 {{ $slot }}
             </main>
@@ -64,5 +67,10 @@
         
 
         @stack('script')
+
+        <x-toaster-hub />
+
+      
+
     </body>
 </html>

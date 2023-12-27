@@ -23,6 +23,10 @@ class DatabaseSeeder extends Seeder
 
         $this->call(CategoriasSeeder::class);
 
+        $this->call(PlanSeeder::class);
+
+        $this->call(ServiciosPlanSeeder::class);
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

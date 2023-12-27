@@ -1,4 +1,4 @@
-<div class="relative" x-data>
+<div class="relative font-general" x-data>
     
 
     <div class="flex justify-center">
@@ -21,7 +21,7 @@
     
     <div class="flex justify-center ">
 
-        <div class=" z-20 absolute w-3/5 mt-1 hidden" :class="{ 'hidden' : !$wire.open }" @click.away="$wire.open = false">
+        <div class=" z-20 absolute  mt-1 hidden" :class="{ 'hidden' : !$wire.open }" @click.away="$wire.open = false">
             
             <div class="bg-white rounded-lg shadow-lg">
                 
@@ -31,7 +31,7 @@
                         <button class="btn btn-sm"
            
                         wire:click="close()">
-                        <i class="	far fa-window-close"></i>
+                        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400"  viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="m10 0c5.5228475 0 10 4.4771525 10 10s-4.4771525 10-10 10-10-4.4771525-10-10 4.4771525-10 10-10zm2.2066229 6.83655409-2.1966229 2.19344591-2.19503375-2.19344591c-.23975034-.23952941-.61340509-.26332117-.87975736-.07148644l-.08447905.07193092c-.2661438.26638927-.2659448.69809262.00044447.96423641l2.19482569 2.19276502-2.19482569 2.1930677c-.26638927.2661438-.26658827.6978471-.00044447.9642364.26614379.2663893.69784714.2665883.96423641.0004445l2.19503375-2.1947486 2.1966229 2.1947486c.2397504.2395294.6134051.2633212.8797574.0714864l.084479-.0719309c.2661438-.2663893.2659448-.6980926-.0004444-.9642364l-2.1954149-2.1930677 2.1954149-2.19276502c.2663892-.26614379.2665882-.69784714.0004444-.96423641-.2661438-.26638928-.6978471-.26658827-.9642364-.00044448z" fill="#555"/></svg>
                     </button>
         
                     </div>
@@ -39,7 +39,7 @@
                         <a href="#" class="flex">
                             <img class="w-16 h-12 object-cover" src="{{ $user->profile_photo_url  }}" alt="">
                             <div class="ml-4 text-gray-700">
-                                <p class="text-lg font-semibold leading-5">{{$user->name}}</p>
+                                <p class="text-md font-semibold leading-5">{{$user->name}}</p>
                              
                             </div>
                         </a>

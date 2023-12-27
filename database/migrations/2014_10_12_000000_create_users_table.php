@@ -26,6 +26,8 @@ return new class extends Migration
 
             $table->string('codigo_referido');
 
+            $table->string('balance');
+
             $table->text('session_id')
             ->nullable()
             ->default(null)

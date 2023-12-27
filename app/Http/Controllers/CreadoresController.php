@@ -13,10 +13,10 @@ class CreadoresController extends Controller
     }
 
     public function select(Creador $creator){
-
-  
-
         return view('profile.view_profile_creator',compact('creator'));
-    
+    }
+
+    public function start_index(){
+        return view('creadores.start_index');
     }
 }

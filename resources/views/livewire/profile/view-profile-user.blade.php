@@ -61,7 +61,7 @@
       <div>
   
         <div class="post mt-2 lg:p-1  rounded-md">
-          <div class=" z-10 lg:left-3 md:w-1/2 md:fixed rounded-md shadow-md ">
+          <div class=" z-10 lg:left-3 rounded-md shadow-md ">
   
             <section class="relative block h-500-px  ">
   
@@ -156,6 +156,53 @@
                   </div>
                 </div>
               </div>
+
+              <div class="flex flex-col justify-center items-center px-6 ">
+        
+
+                <div class="container relative flex h-[430px] w-full flex-col shadow-xl rounded-lg  border-[1px] border-gray-200 bg-white bg-clip-border dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
+                    <div class="flex h-fit w-full items-center justify-between  px-6 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
+                        <h4 class="text-lg font-bold dark:text-white">
+                          Planes
+                        </h4>
+                  
+                    </div>
+
+                  
+                                
+    
+                    @if ($planes->count())
+                      <div class="mt-2 grid grid-cols-2 md:grid-cols-3 gap-3" id="frameworks-integration">
+
+                   
+                        @foreach($planes as $plan)
+                       
+                          <div class="w-full cursor-pointer rounded-xl border border-blue-gray-50 bg-white px-8 py-4  hover:border-blue-gray-100 hover:bg-blue-gray-50 hover:bg-opacity-25">
+                           
+                            
+                            <span class="my-4 h-24 w-32 place-items-center">
+                              <div class=" flex justify-center ">
+                                  <p class="text-sm font-bold"> {{$plan->plan->name}}</p>
+                              </div>
+                              <div class=" flex justify-center ">
+                                <p class="  text-xs "> {{$plan->precio}} PVS</p>
+                              </div>
+                              <div class=" flex justify-center ">
+                               @livewire('profile.suscripcion-user',['plan'=> $plan->plan->id,'creador' => $creator])
+                              </div> 
+                            </span>
+                          </div>
+                        @endforeach
+                      </div>
+                    @else
+                      <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Upss!</strong>
+                        <span class="block sm:inline">Aún no has registrado tus planes</span>
+                      </div>
+                    @endif
+                </div>
+              </div>
+
             </section>
   
           </div>
@@ -177,10 +224,43 @@
   
   
             <div class=" bg-white p-3">
-  
+
+              @if ($publicacion->tipo == 'video')
+
               <video  class="player h-48 w-full aspect-video"  controls crossorigin playsinline >
-              <source src="{{ Storage::url($publicacion->profile) }}" type="video/mp4" size="576">
+              
+                
+              
+                <source src="{{$this->view_publication($publicacion->id) }}" type="video/mp4" size="576">
               </video>
+  
+              @else
+  
+              <img src="{{ $this->view_publication($publicacion->id)}}" class="w-full rounded-t-lg h-90 img_ampliar" onclick="ampliar({{$publicacion->id}})" id="myImg-{{$publicacion->id}}">
+  
+              @endif
+
+
+  
+              {{-- <video  class="player h-48 w-full aspect-video"  controls crossorigin playsinline poster="posterimage.jpg">
+              <source src="{{ Storage::url($publicacion->profile) }}" type="video/mp4" size="576">
+              </video> --}}
+
+              {{-- <article class="relative w-full h-48 bg-cover bg-center group rounded-lg overflow-hidden shadow-lg hover:shadow-2xl  transition duration-300 ease-in-out"
+              style="background-image: url('/imagen/imagen-no-disponible.jpg');">
+                <div class="absolute inset-0 bg-opacity-90  group-hover:opacity-75 transition duration-300 ease-in-out"></div>
+                <div class="relative w-full h-full px-4 sm:px-6 lg:px-4 flex justify-center items-center">
+                    <h3 class="text-center">
+                        <a class="text-white text-2xl font-bold text-center" href="#">
+                            <span class="absolute inset-0"></span>
+                            The best plugins for Visual Studio Code
+                        </a>
+                    </h3>
+                </div>
+              </article> --}}
+
+
+
             </div> 
   
             <div class="flex items-center justify-between text-gray-500">
@@ -213,7 +293,7 @@
                   <span class="block sm:inline">No existe ninguna publicación.</span>
               </div>
      
-        @endforelse
+          @endforelse
        
               </div>
           </div>

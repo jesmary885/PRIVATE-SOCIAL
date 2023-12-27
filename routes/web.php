@@ -26,9 +26,6 @@ Route::get('/', function () {
 
 Route::post('log', [LoginController::class, 'authenticate'])->name('log');
 
-
-
-
         Route::get('/home', HomeController::class)->name('home');
 
 
@@ -57,6 +54,10 @@ Route::post('log', [LoginController::class, 'authenticate'])->name('log');
         Route::get('profile_user/edit_banner', [ProfileController::class, 'index_edit_image']);
         Route::post('crop-image-upload-ajax', [ProfileController::class, 'cropImageUploadAjax']);
         Route::post('crop-image-publicacion', [ProfileController::class, 'cropImagePublicacion']);
+
+        ///HACERSE CREADOR
+
+        Route::get('start_creator', [CreadoresController::class,'start_index'])->name('creadores.start_index');
 
 
 

@@ -1,5 +1,17 @@
 <x-app-layout>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,100&display=swap"
+rel="stylesheet" />
+
+<style>
+    html,
+    body {
+ 
+    }
+</style>
+
     <div class="mb-4 ">
 
         <video autoplay loop muted class="w-full h-96  object-cover -mt-16 ">
@@ -9,23 +21,23 @@
 
     </div>
 
-    <div class="grid grid-cols-6 h-full container font-general">
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 h-full container font-general bg-white">
 
 
-        <div class="bg-gray-100 rounded-lg shadow-md col-span-2 mt-2">
+        <div class="bg-white md:lg:col-span-1 lg:col-span-2 mt-2 mr-2 hidden md:block">
 
             
 
             <div class="flex flex-col justify-center items-center">
                 <div class="relative flex max-w-[500px] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none" >
                     <div class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
-                    <h4 class="text-lg font-bold text-navy-700 dark:text-white font-general">
+                    <h4 class="md:text-sm lg:text-lg font-bold text-navy-700 dark:text-white font-general">
                         Perfiles más populares
                     </h4>
 
-                    <a href="#" class="flex items-center h-10 leading-10 px-4 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1" @click.prevent="showChildren=!showChildren">
+                    <a href="#" class="flex items-center h-10 leading-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 " @click.prevent="showChildren=!showChildren">
 
-                        <span class="ml-3 text-md text-blue-600 font-general">Ver todo</span>
+                        <span class="ml-3 md:text-sm lg:text-lg text-blue-600 font-general">Ver todo</span>
 
                     </a>
 
@@ -252,20 +264,22 @@
 
 
             <div class="flex flex-col mt-2 justify-center items-center">
-                <div class="relative flex max-w-[500px] h-[430px] w-full flex-col rounded-[10px] border-[1px] border-gray-200 bg-white bg-clip-border shadow-md shadow-[#F3F3F3] dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white dark:shadow-none">
+                <div class="relative flex max-w-[500px]  w-full flex-col rounded-md border border-gray-200 bg-white bg-clip-border  dark:border-[#ffffff33] dark:!bg-navy-800 dark:text-white">
                     <div class="flex h-fit w-full items-center justify-between rounded-t-2xl bg-white px-4 pb-[20px] pt-4 shadow-2xl shadow-gray-100 dark:!bg-navy-700 dark:shadow-none">
-                        <h4 class="text-lg font-bold text-navy-700 dark:text-white font-general">
+                        <h4 class="md:text-sm lg:text-lg font-bold text-navy-700 dark:text-white font-general">
                             Solicitudes de conexión
                         </h4>
     
                         <a href="#" class="flex items-center h-10 leading-10 px-4 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100 mx-1" @click.prevent="showChildren=!showChildren">
     
-                            <span class="ml-3 text-md text-blue-600 font-general">Ver todo</span>
+                            <span class="ml-3 md:text-sm lg:text-lg text-blue-600 font-general">Ver todo</span>
     
                         </a>
     
                     </div>
-                    <div class="flex h-full w-full items-start justify-between rounded-md border-[1px] border-[transparent] dark:hover:border-white/20 bg-white px-3 py-[20px] transition-all duration-150 hover:border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
+
+                    
+                    <div class="flex h-full w-full items-start justify-between rounded-md border-[1px] border-[transparent] dark:hover:border-white/20 px-3 py-[20px] transition-all duration-150 hover:border-gray-200 dark:!bg-navy-800 dark:hover:!bg-navy-700">
                         <div class="flex items-center gap-3">
                             <div class="flex h-16 w-16 items-center justify-center">
                             <img
@@ -358,15 +372,15 @@
 
         </div>
 
-        <div class="col-span-3">
+        <div class="md:col-span-2 lg:col-span-3 rounded-[10px] border-[1px] mt-2 mr-2">
 
             @foreach($creadors as $creador)
 
-            <a href="#" class="flex-shrink-0 group block">
-            
+            <a href="{{route('creadores_select.index',$creador)}}" class="flex-shrink-0 group block">
 
-                <div class="bg-gray-100 flex items-center justify-center p-2">
-                    <div class="bg-white p-8 rounded-lg shadow-md w-full">
+
+                <div class=" flex items-center justify-center mt-2   ">
+                    <div class="bg-white pt-8 pr-8 pl-8 w-full">
                         <!-- Banner Profile -->
                         <div class="relative z-0 ">
                             <img src="{{ Storage::url($creador->banner) }}" alt="Banner Profile" class="w-full rounded-t-lg object-cover h-80 ">
@@ -375,51 +389,56 @@
                         <!-- User Info with Verified Button -->
                         <div class="flex items-center mt-4">
                             <h2 class="text-xl font-bold text-gray-800">{{$creador->user->name}}</h2>
-                            <button class=" px-2 py-1 rounded-full">
-                                <svg fill="#4d9aff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px" height="16px" viewBox="0 0 536.541 536.541" xml:space="preserve" stroke="#4d9aff">
-                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                    <g id="SVGRepo_iconCarrier">
-                                        <g>
-                                            <g>
-                                                <path d="M496.785,152.779c-3.305-25.085-16.549-51.934-38.826-74.205c-22.264-22.265-49.107-35.508-74.186-38.813 c-11.348-1.499-26.5-7.766-35.582-14.737C328.111,9.626,299.764,0,268.27,0s-59.841,9.626-79.921,25.024 c-9.082,6.965-24.235,13.238-35.582,14.737c-25.08,3.305-51.922,16.549-74.187,38.813c-22.277,22.271-35.521,49.119-38.825,74.205 c-1.493,11.347-7.766,26.494-14.731,35.57C9.621,208.422,0,236.776,0,268.27s9.621,59.847,25.024,79.921 c6.971,9.082,13.238,24.223,14.731,35.568c3.305,25.086,16.548,51.936,38.825,74.205c22.265,22.266,49.107,35.51,74.187,38.814 c11.347,1.498,26.5,7.771,35.582,14.736c20.073,15.398,48.421,25.025,79.921,25.025s59.841-9.627,79.921-25.025 c9.082-6.965,24.234-13.238,35.582-14.736c25.078-3.305,51.922-16.549,74.186-38.814c22.277-22.27,35.521-49.119,38.826-74.205 c1.492-11.346,7.766-26.492,14.73-35.568c15.404-20.074,25.025-48.422,25.025-79.921c0-31.494-9.621-59.848-25.025-79.921 C504.545,179.273,498.277,164.126,496.785,152.779z M439.256,180.43L246.477,373.209l-30.845,30.846 c-8.519,8.52-22.326,8.52-30.845,0l-30.845-30.846l-56.665-56.658c-8.519-8.52-8.519-22.326,0-30.846l30.845-30.844 c8.519-8.519,22.326-8.519,30.845,0l41.237,41.236L377.561,118.74c8.52-8.519,22.326-8.519,30.846,0l30.844,30.845 C447.775,158.104,447.775,171.917,439.256,180.43z"></path>
-                                            </g>
-                                        </g>
-                                    </g>
+                            <div class=" -mt-1 ml-1 rounded-full">
+                                <svg class=" h-5 fill-blue-400" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24">
+                                <path
+                                  d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z" />
                                 </svg>
-                            </button>
+                            </div>
                         </div>
                         <!-- Bio -->
-                        <p class="text-gray-700 mt-2">{{$creador->biografia}} </p>
+               
         
-                        <!-- Separator Line -->
-                        <hr class="my-4 border-t border-gray-300">
+    
                         <!-- Stats -->
-                        <div class="flex   text-sm text-gray-400 py-1 container">
-                            <div class="flex justify-start ">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path
-                                        d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z">
-                                    </path>
-                                </svg>
-                                <p class="">1.2k Following</p>
-                            </div>
-                            <div class="flex-1 flex justify-end ">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
-                                <p class="">14 posts</p>
-                            </div>
+                        <div class="flex   text-sm text-gray-400 container mt-2">
+
+                            <div class="py-4 flex justify-center items-center w-full  divide-solid">
+
+								<div class="flex mr-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6zM16 7a1 1 0 10-2 0v1h-1a1 1 0 100 2h1v1a1 1 0 102 0v-1h1a1 1 0 100-2h-1V7z">
+                                        </path>
+                                    </svg>
+                                    <p class="">1.2k Following</p>
+                                </div>
+
+                                <div class="flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                    <p class="">14 posts</p>
+                                </div>
+							</div>
+
+        
+
+
                             
                         </div>
                     </div>
                 </div>
 
             </a>
+
+            <hr class="m-0 p-0">
+
 
             @endforeach
 
@@ -431,7 +450,7 @@
 
         </div>
 
-        <div class="bg-gray-100 col-span-1 rounded-lg shadow-md mt-2 ">
+        <div class="bg-white col-span-1 rounded-lg mt-2 hidden lg:block ">
 
        
 

@@ -9,20 +9,20 @@
 }
 </style>
 <div class="font-general">
-    <div class="py-3 px-5 bg-white rounded shadow-sm ">
-        <div class="">
+    <div class="py-3 px-5 bg-white rounded shadow-sm">
+        <div class="px-3">
             <ul class="flex w-full flex-wrap items-center h-8 container">
 
-                <li class="flex-1 block relative ">
+                <li class="flex-1 block relative">
                     <div class="flex">
 
                         <a href="{{route('home')}}" class="rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100 mr-2">
-                            <img src="{{URL::asset('imagen/Private Social 4.png')}}" class="block -mt-10 h-14 w-28 md:h-16 md:w-36 ">
+                            <img src="{{URL::asset('imagen/Private Social 4.png')}}" class="block md:-mt-6 h-14 w-28 md:h-16 md:w-36 ">
                             
                         
                         </a>
     
-                        <div class="hidden lg:block  ml-4 w-2/5 -mt-5">
+                        <div class="hidden lg:block  ml-4 w-2/5 -mt-2">
 
                             @livewire('buscar')
 
@@ -32,7 +32,7 @@
                 </li>
 
 
-                <li class="block relative mr-0 md:mr-2 -mt-4">
+                <li class="hidden md:block relative mr-0 md:mr-2 -mt-3">
                     <a href="{{route('home')}}" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
 
@@ -45,7 +45,7 @@
 
 
 
-                <li class="block relative mr-0 md:mr-2 -mt-4 " x-data="{showChildren:false}" @click.away="showChildren=false">
+                <li class=" hidden md:block relative mr-0 md:mr-2 -mt-3 " x-data="{showChildren:false}" @click.away="showChildren=false">
                     <a href="#" class="h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100" @click.prevent="showChildren=!showChildren">
                         <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                            
@@ -74,7 +74,7 @@
                     </div>
                 </li>
 
-                <li class="block relative mr-0 md:mr-2 -mt-4">
+                <li class="hidden md:block relative mr-0 md:mr-2 -mt-3">
                     <a href="{{route('creadores.index')}}" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                                 
@@ -89,7 +89,7 @@
                     </a>
                 </li>
 
-                <li class="block relative mr-0 md:mr-2 -mt-4">
+                <li class="hidden md:block relative mr-0 md:mr-2 -mt-3">
                     <a href="#" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
 
@@ -101,7 +101,7 @@
                     </a>
                 </li>
 
-                <li class="block relative mr-0 md:mr-2 -mt-4">
+                <li class="hidden md:block relative mr-0 md:mr-2 -mt-3">
                     <a href="#" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
 
@@ -113,7 +113,7 @@
                     </a>
                 </li>
 
-                <li class="block relative -mt-8" x-data="{showChildren:false}" @click.away="showChildren=false">
+                <li class="hidden md:block relative -mt-8" x-data="{showChildren:false}" @click.away="showChildren=false">
                     <div class="mx-2 relative">
 
                         <div class="flex">
@@ -144,7 +144,7 @@
         
                                         <div class="border-t border-gray-100"></div>
         
-                                        <x-dropdown-link class="flex" href="{{ route('profile.show') }}">
+                                        <x-dropdown-link class="flex" href="{{ route('creadores.start_index') }}">
         
                                             <svg fill="none" class=" mr-3" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><g stroke="#292d32" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="m9.5 13.75c0 .97.75 1.75 1.67 1.75h1.88c.8 0 1.45-.68 1.45-1.53 0-.91-.4-1.24-.99-1.45l-3.01-1.05c-.59-.21-.98999-.53-.98999-1.45 0-.84001.64999-1.53001 1.44999-1.53001h1.88c.92 0 1.67.78 1.67 1.75001"/><path d="m12 7.5v9"/><path d="m22 12c0 5.52-4.48 10-10 10s-10-4.48-10-10 4.48-10 10-10"/><path d="m22 6v-4h-4"/><path d="m17 7 5-5"/></g></svg> 
                                             Iniciar como creador
