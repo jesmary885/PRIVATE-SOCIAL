@@ -18,14 +18,12 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
-            $table->string('documento_id');
-            $table->string('valor');
-            $table->string('retiro_pendiente');
-            $table->string('visualizacion_todos');
-            
+            $table->longText('direccion')->nullable();
+            $table->string('zip_code')->nullable();
+            $table->string('retiro_pendiente')->nullable();
+            $table->string('visualizacion_todos')->nullable();
 
             $table->string('banner', 2048)->nullable();
-            $table->string('selfiel', 2048)->nullable();
 
             $table->string('estado_verificacion')->nullable();
 

@@ -19,4 +19,9 @@ class CreadoresController extends Controller
     public function start_index(){
         return view('creadores.start_index');
     }
+
+    public function start_form(){
+        return view('creadores.start_form');
+    }
+
 }

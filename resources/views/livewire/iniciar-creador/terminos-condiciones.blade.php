@@ -13,6 +13,9 @@
             Terms of Service
 
           </p>
+
+          <hr>
+
          
       </x-slot>
 
@@ -29,7 +32,6 @@
                     <h5  class="block antialiased tracking-normal font-sans text-xl leading-snug text-inherit mt-6 mb-1 font-semibold !text-black"> Can you use Tailwind CSS with Angular? </h5>
                     <div  class="block antialiased font-sans text-base leading-relaxed mb-4 font-normal text-gray-600"> Yes, you can surely use the Tailwind CSS framework with Angular. Tailwind CSS is a popular utility-first CSS framework that can be integrated into Angular projects. It provides a set of pre-designed utility classes that can help streamline your styling and layout efforts when building Angular applications. Check our documentation that explains how you can easily integrate them. </div>
                     <hr  class="my-6 border-blue-gray-50">
-                    <hr  class="my-6 border-blue-gray-50">
                     <h5  class="block antialiased tracking-normal font-sans text-xl leading-snug text-inherit mt-6 mb-1 font-semibold !text-black"> What is Tailwind CSS in Angular? </h5>
                     <div  class="block antialiased font-sans text-base leading-relaxed mb-4 font-normal text-gray-600"> Tailwind CSS in Angular refers to the integration of the Tailwind CSS framework into Angular applications. It allows Angular developers to leverage Tailwind's utility classes to style and design user interfaces. </div>
                     <hr  class="my-6 border-blue-gray-50">
@@ -43,11 +45,7 @@
                     <div  class="block antialiased font-sans text-base leading-relaxed mb-4 font-normal text-gray-600"> Tailwind CSS can be a great choice for styling Angular applications. Its utility classes can help maintain consistency and speed up development. However, the suitability of Tailwind CSS for Angular depends on your project's requirements and your team's familiarity with both technologies. It's often a matter of personal or team preference, so consider your specific context when deciding whether to use it with Angular. </div>
                     </div>
                 </div>
-                <div class="w-full pt-5 px-4 mb-8 mx-auto ">
-                    <div class="text-sm text-gray-700 py-1">
-                        Made with <a class="text-gray-700 font-semibold" href="https://david-ui-angular.com/?ref=tailwindcomponents" target="_blank">David UI Angular</a> by <a href="https://www.creative-tim.com?ref=tailwindcomponents" class="text-gray-700 font-semibold" target="_blank"> Creative Tim</a>.
-                    </div>
-                </div>
+       
             </section>
             
         </div>
@@ -63,11 +61,6 @@
               Cerrar
           </button>
     
-
-          <button wire:click="update" class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
-              Editar
-          </button>
-
       </x-slot>
 
   </x-dialog-modal>

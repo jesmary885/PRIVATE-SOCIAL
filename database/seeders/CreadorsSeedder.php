@@ -15,8 +15,6 @@ class CreadorsSeedder extends Seeder
     {
         Creador::create([
             'user_id' => '1',
-            'documento_id' => '58966541',
-            'valor' => '10$',
             'retiro_pendiente' => '25$',
             'visualizacion_todos' => 'si',
             'estado_verificacion' => 'completada',
@@ -25,8 +23,6 @@ class CreadorsSeedder extends Seeder
 
         Creador::create([
             'user_id' => '2',
-            'documento_id' => '58966541',
-            'valor' => '10$',
             'retiro_pendiente' => '25$',
             'visualizacion_todos' => 'si',
             'estado_verificacion' => 'completada',
@@ -34,8 +30,6 @@ class CreadorsSeedder extends Seeder
         ]);
         Creador::create([
             'user_id' => '3',
-            'documento_id' => '58966541',
-            'valor' => '10$',
             'retiro_pendiente' => '25$',
             'visualizacion_todos' => 'si',
             'estado_verificacion' => 'completada',
@@ -43,8 +37,6 @@ class CreadorsSeedder extends Seeder
         ]);
         Creador::create([
             'user_id' => '4',
-            'documento_id' => '58966541',
-            'valor' => '10$',
             'retiro_pendiente' => '25$',
             'visualizacion_todos' => 'si',
             'estado_verificacion' => 'completada',
@@ -52,8 +44,6 @@ class CreadorsSeedder extends Seeder
         ]);
         Creador::create([
             'user_id' => '5',
-            'documento_id' => '58966541',
-            'valor' => '10$',
             'retiro_pendiente' => '25$',
             'visualizacion_todos' => 'si',
             'estado_verificacion' => 'completada',

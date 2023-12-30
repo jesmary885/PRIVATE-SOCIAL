@@ -14,7 +14,9 @@ class UserSeedder extends Seeder
     public function run(): void
     {
         User::create([
-            'name' => 'User1 Prueba',
+            'username' => 'User1 Prueba',
+            'name' => 'User1',
+            'lastname' => 'Prueba',
             'email' => 'user1@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
@@ -26,7 +28,9 @@ class UserSeedder extends Seeder
         ]);
 
         User::create([
-            'name' => 'User2 Prueba',
+            'username' => 'User2 Prueba',
+            'name' => 'User2',
+            'lastname' => 'Prueba',
             'email' => 'user2@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
@@ -37,7 +41,9 @@ class UserSeedder extends Seeder
         ]);
 
         User::create([
-            'name' => 'User3 Prueba',
+            'username' => 'User3 Prueba',
+            'name' => 'User3',
+            'lastname' => 'Prueba',
             'email' => 'user3@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
@@ -49,7 +55,9 @@ class UserSeedder extends Seeder
         ]);
 
         User::create([
-            'name' => 'User4 Prueba',
+            'username' => 'User4 Prueba',
+            'name' => 'User4',
+            'lastname' => 'Prueba',
             'email' => 'user4@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',
@@ -60,7 +68,9 @@ class UserSeedder extends Seeder
         ]);
 
         User::create([
-            'name' => 'User5 Prueba',
+            'username' => 'User5 Prueba',
+            'name' => 'User5',
+            'lastname' => 'Prueba',
             'email' => 'user5@gmail.com',
             'password' => bcrypt('12345678'),
             'estado' => 'activo',

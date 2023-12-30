@@ -58,6 +58,7 @@ Route::post('log', [LoginController::class, 'authenticate'])->name('log');
         ///HACERSE CREADOR
 
         Route::get('start_creator', [CreadoresController::class,'start_index'])->name('creadores.start_index');
+        Route::get('start_creator/form', [CreadoresController::class,'start_form'])->name('creadores.form');
 
 
 

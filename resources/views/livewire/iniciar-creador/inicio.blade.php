@@ -56,7 +56,7 @@
 
             
 
-            <h4 class="text-center font-thin text-xl mt-20">Si estas de acuerdo con nuestros criterios no esperes más e inicia haciendo click <a class="underline text-gray-600 cursor-pointer" href="">Aquí</a></h4>
+            <h4 class="text-center font-thin text-xl mt-20">Si estas de acuerdo con nuestros criterios no esperes más e inicia haciendo click <a class="underline text-gray-600 cursor-pointer" href="{{route('creadores.form')}}">Aquí</a></h4>
 
 
         </div>
