@@ -69,4 +69,15 @@ class User extends Authenticatable
         return $this->hasMany(Creador::class);
     }
 
+    public function chats(){
+        return $this->belongsToMany(Chats::class)->withPivot('color','active')->withTimestamps();
+    }
+
+    public function contacts(){
+        return $this->hasMany(Contactos::class);
+    }
+    public function messagess(){
+        return $this->hasMany(Mensajes::class);
+    }
+
 }

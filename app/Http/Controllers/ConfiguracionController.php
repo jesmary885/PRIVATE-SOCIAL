@@ -19,4 +19,8 @@ class ConfiguracionController extends Controller
     public function pagos(){
         return view('configurations.pagos');
     }
+
+    public function solicitudes(){
+        return view('configurations.solicitudes');
+    }
 }

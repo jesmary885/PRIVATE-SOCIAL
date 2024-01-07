@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\ConfiguracionController;
 use App\Http\Controllers\CreadoresController;
 use App\Http\Controllers\HomeController;
@@ -37,6 +38,8 @@ Route::post('log', [LoginController::class, 'authenticate'])->name('log');
         Route::get('configurations/account', [ConfiguracionController::class,'cuenta'])->name('configuracion_cuenta');
         Route::get('configurations/privacy', [ConfiguracionController::class,'privacidad'])->name('configuracion_privacidad');
         Route::get('configurations/payments', [ConfiguracionController::class,'pagos'])->name('configuracion_pagos');
+        Route::get('configurations/solicitudes', [ConfiguracionController::class,'solicitudes'])->name('solicitudes');
+
 
 
         Route::get('creadores', [CreadoresController::class,'index'])->name('creadores.index');
@@ -59,6 +62,13 @@ Route::post('log', [LoginController::class, 'authenticate'])->name('log');
 
         Route::get('start_creator', [CreadoresController::class,'start_index'])->name('creadores.start_index');
         Route::get('start_creator/form', [CreadoresController::class,'start_form'])->name('creadores.form');
+        Route::get('start_creator/info', [CreadoresController::class,'informacion'])->name('creadores.informacion');
+
+
+        //CHAT
+
+        Route::get('chat-conver/{contact?}',[ChatController::class,'index'])->name('chat.index');
+        Route::get('chat-conver/{user}',[ChatController::class,'chat_convers'])->name('chat.convers');
 
 
 

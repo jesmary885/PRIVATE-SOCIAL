@@ -5,6 +5,5 @@ import Clipboard from '@ryangjchandler/alpine-clipboard'
 import '../../vendor/masmerise/livewire-toaster/resources/js';
  
 Alpine.plugin(Clipboard)
-
-
+ 
 Livewire.start()

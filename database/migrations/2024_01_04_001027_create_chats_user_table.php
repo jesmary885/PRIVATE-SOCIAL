@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('chat_users', function (Blueprint $table) {
+        Schema::create('chats_user', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
             $table->foreignId('user_id')->constrained();
-            $table->foreignId('chat_id')->constrained();
+            $table->foreignId('chats_id')->constrained();
             $table->string('color')->nullable();
             $table->boolean('active')->default(true);
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('chat_users');
+        Schema::dropIfExists('chats_user');
     }
 };

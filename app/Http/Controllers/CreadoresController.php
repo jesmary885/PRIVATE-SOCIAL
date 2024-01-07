@@ -24,4 +24,8 @@ class CreadoresController extends Controller
         return view('creadores.start_form');
     }
 
+    public function informacion(){
+        return view('creadores.informacion');
+    }
+
 }

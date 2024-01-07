@@ -23,6 +23,9 @@ return new class extends Migration
             $table->string('retiro_pendiente')->nullable();
             $table->string('visualizacion_todos')->nullable();
 
+            $table->string('instagram')->nullable();
+            $table->string('facebook')->nullable();
+
             $table->string('banner', 2048)->nullable();
 
             $table->string('estado_verificacion')->nullable();

@@ -90,7 +90,7 @@
                 </li>
 
                 <li class="hidden md:block relative mr-0 md:mr-2 -mt-3">
-                    <a href="#" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
+                    <a href="{{route('chat.index')}}" class=" h-10 rounded cursor-pointer no-underline hover:no-underline transition-colors duration-100  hover:bg-gray-100">
                             <div class="p-2 rounded cursor-pointer hover:no-underline transition-colors duration-100  hover:bg-gray-100">
 
                             
